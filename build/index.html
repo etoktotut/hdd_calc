@@ -1,0 +1,59 @@
+Html Webpack Plugin:
+<pre>
+  Error: html-webpack-plugin could not minify the generated output.
+  In production mode the html minifcation is enabled by default.
+  If you are not generating a valid html output please disable it manually.
+  You can do so by adding the following setting to your HtmlWebpackPlugin config:
+  |
+  |    minify: false
+  |
+  See https://github.com/jantimon/html-webpack-plugin#options for details.
+  For parser dedicated bugs please create an issue here:
+  https://danielruf.github.io/html-minifier-terser/
+  Parse Error: <select name="codec class="inp-end"" id="codec" > 
+                      <option value="H.264">H.264</option> 
+                      <option value="H.264+">H.264+</option> 
+                      <option value="H.265" selected>H.265</option> 
+                      <option value="H.265+">H.265+</option> 
+                  </select> 
+                  <label for="hours">Часов в день</label> 
+                  <input name="hours" id="hours" type="number" min=4 max=24 step=4 class="hours" style="width: 50px" value=24> 
+                  <span>ч.</span> 
+                 <!-- </div> --> 
+              <span class="plus-minus">+</span> 
+              </div> 
+          <label for="days">Архив</label> 
+              <input name="days" id="days" type="number" min=1 class="days" style="width: 50px" value=7> 
+              <span>дней</span> 
+          </div> 
+          </div> 
+      </form> 
+      <div class="total-volume"> 
+              <label for="volume">Итого:</label> 
+              <span name="volume" id="total-volume"> 15Tb</span> 
+      </div> 
+  </body> 
+  </html>
+  
+  - htmlparser.js:244 new HTMLParser
+    [HDD_CALC]/[html-minifier-terser]/src/htmlparser.js:244:13
+  
+  - htmlminifier.js:993 minify
+    [HDD_CALC]/[html-minifier-terser]/src/htmlminifier.js:993:3
+  
+  - htmlminifier.js:1354 Object.exports.minify
+    [HDD_CALC]/[html-minifier-terser]/src/htmlminifier.js:1354:16
+  
+  - index.js:1049 minifyHtml
+    [HDD_CALC]/[html-webpack-plugin]/index.js:1049:46
+  
+  - index.js:479 postProcessHtml
+    [HDD_CALC]/[html-webpack-plugin]/index.js:479:35
+  
+  - index.js:340 
+    [HDD_CALC]/[html-webpack-plugin]/index.js:340:22
+  
+  - task_queues.js:97 processTicksAndRejections
+    internal/process/task_queues.js:97:5
+  
+</pre>

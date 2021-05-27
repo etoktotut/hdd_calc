@@ -1,0 +1,21 @@
+.inp-end {
+
+    margin-right: 20px;
+}
+
+.cam {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.plus-minus{
+    position: relative;
+    width: 36px;
+    height: 36px;
+    right: - 10px;
+    font-size: 24px;
+    background-color: yellow;
+    border-radius: 20%;
+    border-color: black;
+    border-width: 1px;
+}

@@ -1,0 +1,21 @@
+form .inp-end {
+  margin-right: 10px;
+}
+
+.cam {
+  position: relative;
+}
+
+.plus-minus {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  right: -10px;
+  font-size: 24px;
+  background-color: yellow;
+  border-radius: 50%;
+  border-color: black;
+  border-width: 1px;
+}
+
+/*# sourceMappingURL=main.css.map*/
