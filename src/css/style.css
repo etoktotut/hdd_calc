@@ -1,3 +1,17 @@
+button.add-button{
+    display: none;
+}
+
+button.add-button.active{
+    display: inline-block;
+}
+
+.btn-outline-danger{
+    display: inline-block;
+    margin-bottom: 5px;
+
+}
+
 .inp-end {
 
     margin-right: 20px;

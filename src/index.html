@@ -15,17 +15,19 @@
 </head>
 
 <body>
+    <div class="container-fluid mt-4">
+  
     <div class="col-sm-8">
         <div class="alert alert-warning shadow">
             
 
             <div class="form-group row">
                 <div class="cam">
-                    <button class="btn btn-primary shadow"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="20" fill="currentColor" class="bi bi-plus-circle" viewBox="0 2 16 16">
+                    <button class="btn btn-primary shadow add-button active"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="20" fill="currentColor" class="bi bi-plus-circle" viewBox="0 2 16 16">
   <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
   <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
 </svg> Еще вариант</button>
-                    <button class="btn btn-warning shadow"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="20" fill="currentColor" class="bi bi-trash" viewBox="0 2 16 16">
+                    <button class="btn btn-warning shadow reset-button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="20" fill="currentColor" class="bi bi-trash" viewBox="0 2 16 16">
   <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
   <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
 </svg> Сбросить</button>
@@ -33,17 +35,19 @@
                 
             </div>
         
-        
+        <div class="entry">
+            <ul>
+                <li class="entry_row">
             <div class="form-group row"> 
         
         
             <div class="cam">
             <label for="cam-count">Камер</label>
-            <input name="cam-count" id="cam-count" type="number" min=1 class="cam-count  inp-end" style="width: 50px" value=1>
+            <input name="cam-count" id="cam-count" type="number" min=1 class="cam-count inp-end sense" style="width: 50px" value=1>
 
         
         <label for="mp">Разрешение</label>
-            <select name="mp" id="mp">
+            <select name="mp" id="mp" class="sense">
                 <option value="2" selected>2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
@@ -57,10 +61,10 @@
             
             
                 <label for="fps">Частота кадров</label>
-                <input name="fps" id="fps" type="number" min=0 max=50 step=5 class="fps" style="width: 50px" value=25>
+                <input name="fps" id="fps" type="number" min=1 max=50 step=1 class="fps sense" style="width: 50px" value=25>
                 <span class="inp-end">fps</span>
                 <label for="codec">Кодек</label>
-                <select name="codec" class="inp-end" id="codec" >
+                <select name="codec" class="inp-end sense" id="codec" >
                     <option value="H.264">H.264</option>
                     <option value="H.264+">H.264+</option>
                     <option value="H.265" selected>H.265</option>
@@ -68,17 +72,24 @@
                 </select>
 
                 <label for="hours">Часов в день </label>
-                <input name="hours" id="hours" type="number" min=4 max=24 step=4 class="hours" style="width: 50px" value=24>
+                <input name="hours" id="hours" type="number" min=4 max=24 step=4 class="hours sense" style="width: 50px" value=24>
                 <span class="inp-end"> ч.</span>
+
+                
+              </div>
+             </div>
+             </li>
+            </ul>
             </div>
-            </div>
+
+
             <div class="form-group row"> 
                 <div class="cam">
-        <label for="days">Архив</label>
-        <input name="days" id="days" type="number" min=1 class="days" style="width: 50px" value=7>
-        <span> дн.</span>
-        </div>
-    </div>
+                    <label for="days">Архив</label>
+                    <input name="days" id="days" type="number" min=1 class="days" style="width: 50px" value=7>
+                    <span> дн.</span>
+                </div>
+            </div>
         
         
     <div class="form-group row"> 
@@ -86,10 +97,12 @@
     
         <div class="total-volume">
             <h5><label for="volume">Итого:</label>
-           <span name="volume" id="total-volume"> 15Tb</span></h5>  
+           <b><span name="volume" id="total-volume">15T</span></b></h5>  
         </div>
       </div>
     </div>
+</div>
+
 </div>
 
 </body>
